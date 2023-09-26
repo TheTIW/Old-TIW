@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<link rel="stylesheet" type="text/css" href="style.css">
+<head>
+	<title>Canvas - Dashboard</title>
+	<style>
+		.overlay {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.5);
+			z-index: 999;
+			display: none;
+		}
+
+		.overlay iframe {
+			position: absolute;
+			top: 0%;
+			left: 0%;
+			transform: translate(-50%, -50%);
+			width: 90%;
+			height: 90%;
+		}
+	</style>
+</head>
+<body>
+	<iframe></iframe>
+  <script>
+      const blob = await res.blob();
+      const urlObject = URL.createObjectURL(blob);
+</script>
+	<p>Press P To Open It Up</p>
+	<h1> 2023 KWAZEH AND TIW TEAM. </h1>
+	<div class="overlay" id="myOverlay">
+		<iframe src="/main.html"></iframe>
+	</div>
+		<button class="butt" id="closebutton" onclick="hideOverlay()">Press This To Close It Up ;)</button>
+      <style>
+  .butt {
+    position: absolute;
+    top: 1px;
+    left: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #6C63FF;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(108, 99, 255, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    outline: none;
+  }
+      </style>
+	<script>
+		var sequence = "";
+		document.addEventListener("keydown", function(event) {
+			if (event.code == "KeyP") {
+				var now = new Date().getTime();
+				if (sequence.length > 0 && now - sequence[sequence.length - 1].time > 1000) {
+					sequence = "";
+				}
+				sequence += now.toString();
+				if (sequence.length >= 3) {
+					if (sequence[sequence.length - 1] - sequence[sequence.length - 3] < 1000) {
+						document.getElementById("myOverlay").style.display = "block";
+						sequence = "";
+					}
+				}
+			}
+		});
+
+		function hideOverlay() {
+			document.getElementById("myOverlay").style.display = "none";
+		}
+	</script>
+</body>
+</html>

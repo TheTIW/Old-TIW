@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="gframe.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/logo.png">
+  
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3783528285963344"
+     crossorigin="anonymous"></script>
+  
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <img src="/logo.png" alt="Logo">
+      <h3>TIW</h3>
+    </div>
+    <div class="btn-container"> <center> 
+    <button class="button" onclick="goBack()">Back</button>
+    <button class="button" onclick="reloadPage()">Reload</button> 
+    <button class="button" onclick="toggleFullscreen()">Fullscreen</button> </center>
+    </div>
+    <ul class="menu">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/static/games.html">Games</a></li>
+      <li><a href="/static/">Proxy</a></li>
+      <li><a href="/settings/">Settings</a></li>
+    </ul>
+  </nav>
+  <iframe id="iframe" src=""></iframe>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+<script>
+  // Retrieve the storedURL from local storage
+const storedURL = localStorage.getItem('storedURL');
+
+// Set the src attribute of the iframe to the storedURL
+const iframe = document.getElementById('iframe');
+iframe.src = storedURL;
+
+</script>
+
+
+<script src="indexg.js"></script>
+<script src="/settings/js/settings.js"></script>

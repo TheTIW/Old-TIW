@@ -35,12 +35,20 @@
 
 <script>
   // Retrieve the storedURL from local storage
-const storedURL = localStorage.getItem('storedURL');
+  const storedURL = localStorage.getItem('storedURL');
 
-// Set the src attribute of the iframe to the storedURL
-const iframe = document.getElementById('iframe');
-iframe.src = storedURL;
+  // Set the src attribute of the iframe to the storedURL
+  const iframe = document.getElementById('iframe');
+  iframe.src = storedURL;
 
+          // Check if the stored URL exists
+          if (storedURL) {
+            // Use the stored URL for further processing, e.g., loading the game
+            console.log("Stored URL:", storedURL);
+            // You can use 'storedURL' for whatever you need here
+        } else {
+            console.error("Stored URL not found in localStorage.");
+        }
 </script>
 
 

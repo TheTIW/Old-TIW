@@ -2,8 +2,9 @@
 
 <h1 align="center">Skid Hub</h1>
 
-TiW is a bunch of skids.
-
+fuck "There's Infinite Ways", stop skidding blatantly and be more creative <br>
+![image](https://github.com/Orphanlol/Skid-TiW/assets/83834491/0bba8993-c4ed-43af-86ee-76f2cdb25d4c)<br>
+shit above ass
 ## Deployment
 no idiot
 
